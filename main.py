@@ -17,11 +17,22 @@ first_span = h3.find("span")
 
 links = []
 
-for link in first_span.find_all('a'):
-    href = link.get('href')
+for link in first_span.find_all("a"):
+    href = link.get("href")
     href = href.replace(" ", "%20")
     links.append(href)
 
 ul = totalData.find("ul")
 
-print(ul)
+bills = []
+
+for paragraph in ul.find_all("li"):
+    bill = []
+    text = paragraph.text
+    bill.append(paragraph.text)
+    for link in paragraph.find_all("a"):
+        href = link.get("href")
+        bill.append(href)
+    bills.append(bill)
+
+print(bills)
