@@ -40,9 +40,36 @@ for paragraph in ul.find_all("li"):
     text = " ".join(text.split())
     description = text.split(":")[0]
     bill.append(description)
-    for link in paragraph.find_all("a"):
-        href = link.get("href")
-        bill.append(href)
+    link = paragraph.find_all("a")[-1]
+    href = link.get("href")
+    bill.append(href)
+    d = HTMLSession()
+    response_d = d.get(href)
+    response_d.html.render()
+    soup_d = BeautifulSoup(response_d.html.html, "html.parser")
+    bill_name = soup_d.find_all("div", class_="billStatusAtAGlanceSubText")[0].text
+    current_status = soup_d.find_all("div", class_="billStatusAtAGlanceSubText")[1].text
+    current_status = current_status[1:]
+    current_status = current_status.strip()
+    bill.append(bill_name)
+    bill.append(current_status)
+    div = soup_d.find(id = "horizontalStatusDisplay").find("div", class_="col-xs-12")
+    svgs = div.find_all("svg")[1:4]
+    for svg in svgs:
+        circles = []
+        circle_set = svg.find_all("circle")
+        for index in range(len(circle_set)):
+            circle = circle_set[index]
+            if circle["fill"] == "white":
+                circles.append("0")
+            elif circle["fill"] == "black":
+                circles.append("1")
+        if len(circles) == 1:
+            circles = ["1", "1", "1", "1"]
+        bill.append(circles)
+    div = soup_d.find("div", class_="container-fluid").find("div", class_="row clearfix").findChildren("div", class_=None)[5]
+    divs = div.find_all("div", class_="row clearfix")[2:4]
+    print(divs[0].prettify())
+    print(divs[1].prettify())
+    response_d.close()
     bills.append(bill)
-
-print(bills)
