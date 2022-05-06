@@ -1,4 +1,4 @@
-### COLUMNS DESCRIPTIONS
+### COLUMN DESCRIPTIONS
 
 **Main Topic, Description 1, Bill Link, Bill Name, House Progress, Senate Progress, After Passage Progress, 
 Description 2, Sponsors, Requester**
