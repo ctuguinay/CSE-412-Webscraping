@@ -7,27 +7,26 @@ h3 = None
 first_span = None
 
 #"?biennium=2021-22&topicId=14720"
+#"?biennium=2021-22&topic=BUDGETS",
+#   "?biennium=2021-22&topic=COMPUTERS",
+#   "?biennium=2021-22&topic=EMERGENCY%20MANAGEMENT%20AND%20SERVICES",
+#   "?biennium=2021-22&topic=EMERGENCY,%20STATE%20OF",
+#  "?biennium=2021-22&topic=EMPLOYMENT%20AND%20EMPLOYEES"
+#"?biennium=2021-22&topic=FOOD%20AND%20FOOD%20PRODUCTS",
+#    "?biennium=2021-22&topic=HEALTH%20AND%20SAFETY,%20PUBLIC",
+#    "?biennium=2021-22&topic=HOMELESS%20PERSONS",
+#    "?biennium=2021-22&topic=HOMES%20AND%20HOUSING",
+# "?biennium=2021-22&topic=LABOR",
+#"?biennium=2021-22&topic=LONG-TERM%20CARE",
+#"?biennium=2021-22&topic=MENTAL%20HEALTH",
+#"?biennium=2021-22&topic=PUBLIC%20ASSISTANCE",
+#    "?biennium=2021-22&topic=REAL%20ESTATE%20AND%20REAL%20PROPERTY",
+#    "?biennium=2021-22&topic=TAX%20PREFERENCES%20-%20EXEMPTIONS,%20CREDITS,%20DEDUCTIONS,%20DEFERRALS,%20ETC.",
+#    "?biennium=2021-22&topic=TAXES%20-%20PROPERTY",
+#    "?biennium=2021-22&topic=TELECOMMUNICATIONS",
 
-topics = ["?biennium=2021-22&topic=BUDGETS",
-    "?biennium=2021-22&topic=COMPUTERS",
-    "?biennium=2021-22&topic=EMERGENCY%20MANAGEMENT%20AND%20SERVICES",
-    "?biennium=2021-22&topic=EMERGENCY,%20STATE%20OF",
-    "?biennium=2021-22&topic=EMPLOYMENT%20AND%20EMPLOYEES",
-    "?biennium=2021-22&topic=FOOD%20AND%20FOOD%20PRODUCTS",
-    "?biennium=2021-22&topic=HEALTH%20AND%20SAFETY,%20PUBLIC",
-    "?biennium=2021-22&topic=HOMELESS%20PERSONS",
-    "?biennium=2021-22&topic=HOMES%20AND%20HOUSING",
-    "?biennium=2021-22&topic=LABOR",
-    "?biennium=2021-22&topic=LONG-TERM%20CARE",
-    "?biennium=2021-22&topic=MENTAL%20HEALTH",
-    "?biennium=2021-22&topic=PUBLIC%20ASSISTANCE",
-    "?biennium=2021-22&topic=REAL%20ESTATE%20AND%20REAL%20PROPERTY",
-    "?biennium=2021-22&topic=TAX%20PREFERENCES%20-%20EXEMPTIONS,%20CREDITS,%20DEDUCTIONS,%20DEFERRALS,%20ETC.",
-    "?biennium=2021-22&topic=TAXES%20-%20PROPERTY",
-    "?biennium=2021-22&topic=TELECOMMUNICATIONS",
-    "?biennium=2021-22&topic=UNEMPLOYMENT%20COMPENSATION",
+topics = ["?biennium=2021-22&topic=UNEMPLOYMENT%20COMPENSATION",
     "?biennium=2021-22&topic=WORKERS%27%20COMPENSATION"]
-
 
 for index in range(len(topics)):
 
@@ -103,8 +102,14 @@ for index in range(len(topics)):
                 bill.append(circles)
             div = soup_d.find("div", class_="container-fluid").find("div", class_="row clearfix").findChildren("div", class_=None)[5]
             divs = div.find_all("div", class_="row clearfix")
-            bill.append(divs[1].text.strip())
-            bill.append((" ".join(divs[2].text.split()).replace("Sponsors: ", "")))
+            try:
+                bill.append(divs[1].text.strip())
+            except:
+                bill.append("No Description")
+            try:
+                bill.append((" ".join(divs[2].text.split()).replace("Sponsors: ", "")))
+            except:
+                bill.append("No Sponsors")
             try:
                 if "Companion Bill:" in divs[3].text.strip():
                     bill.append("No Requester")
