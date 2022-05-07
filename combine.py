@@ -18,6 +18,7 @@ with open(combined, 'w', newline='') as combinedFile:
         writer.writerow(data)
 
 members = listdir("member_CSVS")
+
 dataset = []
 combined = "combined_members.csv"
 for member in members:
