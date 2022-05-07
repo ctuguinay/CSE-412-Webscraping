@@ -60,9 +60,9 @@ for index in range(len(topics)):
 
     main_topic_underscore = main_topic.replace(" ", "_")
 
-    with open(main_topic_underscore + ".csv", mode='w') as employee_file:
+    with open(main_topic_underscore + ".csv", mode='w') as file:
 
-        csv_writer = csv.writer(employee_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
+        csv_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
 
         ul = totalData.find("ul").find("ul")
 
