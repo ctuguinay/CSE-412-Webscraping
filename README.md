@@ -1,4 +1,4 @@
-### COLUMN DESCRIPTIONS
+### COLUMN DESCRIPTIONS FOR TOPIC CSVs
 
 **Main Topic, Description 1, Bill Link, Bill Name, House Progress, Senate Progress, After Passage Progress, 
 Description 2, Sponsors, Requester**
