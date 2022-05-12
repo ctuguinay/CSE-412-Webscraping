@@ -4,7 +4,7 @@ import csv
 topics = listdir("topic_CSVS")
 
 dataset = []
-combined = "combined_topics.csv"
+combined = "topic_CSVs/combined_topics.csv"
 for topic in topics:
     filename = "topic_CSVS/" + topic
     with open(filename, 'r', newline='') as csvFile:
@@ -20,7 +20,7 @@ with open(combined, 'w', newline='') as combinedFile:
 members = listdir("member_CSVS")
 
 dataset = []
-combined = "combined_members.csv"
+combined = "member_CSVs/combined_members.csv"
 for member in members:
     filename = "member_CSVs/" + member
     with open(filename, 'r', newline='') as csvFile:

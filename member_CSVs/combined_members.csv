@@ -1,3 +1,4 @@
+name,party,representative
 Peter Abbarno,R,representative
 Andrew Barkis,R,representative
 Jessica Bateman,D,representative
@@ -96,6 +97,7 @@ J.T. Wilcox,R,representative
 Sharon Wylie,D,representative
 Alex Ybarra,R,representative
 Jesse Young,R,representative
+name,party,senator
 Andy Billig,D,senator
 John Braun,R,senator
 Sharon Brown,R,senator
