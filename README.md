@@ -1,7 +1,7 @@
 ### COLUMN DESCRIPTIONS FOR TOPIC CSVs
 
 **Main Topic, Description 1, Bill Link, Bill Name, Current Status, House Progress, Senate Progress, After Passage Progress, 
-Description 2, Sponsors, Requester**
+Description 2, Sponsors, Requester, Democratic Sponsor Count, Republican Sponsor Count**
 
 *Note: In House, Senate, and After Passage Progress data, a 1 and 0 represent a pass or no pass in the following order:
 [Introduced, In Committee, On Floor Calendar, Passed Chamber]*. Additionally, Description 1 and Current Status data is 
