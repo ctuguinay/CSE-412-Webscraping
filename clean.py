@@ -16,21 +16,20 @@ for topic in topics:
         reader = csv.reader(csvFile, delimiter=',', quotechar='"')
         writer = csv.writer(tempfile, delimiter=',', quotechar='"')
         for row in reader:
-            if len(row) == 13:
-                if row[0] == "main_topic":
-                    columns = ["main_topic", "description_1", "bill_link", "bill_name", "current_status",
-                               "first_house_progress",
-                               "second_house_progress", "after_passage_progress", "description_2", "sponsors",
-                               "requester"]
-                    writer.writerow(columns)
-                else:
-                    sponsors = row[9]
-                    sponsors = sponsors.replace("Johnson, J.", "Jesse Johnson")
-                    sponsors = sponsors.replace("Wilson, C.", "Claire Wilson")
-                    sponsors = sponsors.replace("Wilson, J.", "Jeff Wilson")
-                    sponsors = sponsors.replace("Wilson, L.", "Linda Wilson")
-                    row[9] = sponsors
-                    writer.writerow(row)
+            if row[0] == "main_topic":
+                columns = ["main_topic", "description_1", "bill_link", "bill_name", "current_status",
+                           "first_house_progress",
+                           "second_house_progress", "after_passage_progress", "description_2", "sponsors",
+                           "requester", "democrat_sponsor_count", "republican_sponsor_count"]
+                writer.writerow(columns)
+            else:
+                sponsors = row[9]
+                sponsors = sponsors.replace("Johnson, J.", "Jesse Johnson")
+                sponsors = sponsors.replace("Wilson, C.", "Claire Wilson")
+                sponsors = sponsors.replace("Wilson, J.", "Jeff Wilson")
+                sponsors = sponsors.replace("Wilson, L.", "Linda Wilson")
+                row[9] = sponsors
+                writer.writerow(row)
 
     shutil.move(tempfile.name, filename)
 
