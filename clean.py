@@ -23,6 +23,12 @@ for topic in topics:
                 #sponsors = sponsors.replace("Wilson, J.", "Jeff Wilson")
                 #sponsors = sponsors.replace("Wilson, L.", "Linda Wilson")
                 #row[9] = sponsors
+                if "['0','0','0','0']" in row[5]:
+                    row[5] = "['1','0','0','0']"
+                if "['0','0']" in row[7]:
+                    row[7] == "['1', '1', '1', '0']"
+                if row[4] == "ov vetoed":
+                    row[4] = "Gov vetoed"
                 writer.writerow(row)
 
     shutil.move(tempfile.name, filename)
@@ -41,7 +47,6 @@ for member in members:
         #writer.writerow(columns)
 
         for row in reader:
-            if len(row) == 2:
-                writer.writerow(row)
+            writer.writerow(row)
 
     shutil.move(tempfile.name, filename)
