@@ -3,12 +3,13 @@ from os import listdir
 import shutil
 import csv
 
-topics = listdir("topic_CSVS")
+#topics = listdir("topic_CSVS")
+topics = listdir("revised_topic_CSVS")
 
 filenameTwo = "member_CSVs/combined_members.csv"
 for topic in topics:
-    filename = "topic_CSVS/" + topic
-    print(topic)
+    #filename = "topic_CSVS/" + topic
+    filename = "revised_topic_CSVS/" + topic
     tempfile = NamedTemporaryFile('w+t', newline='', delete=False)
 
     with open(filename, 'r', newline='') as csvFile, tempfile:
@@ -19,11 +20,13 @@ for topic in topics:
         # writer.writerow(columns)
         for row in reader:
             if "main_topic" == row[0]:
-                row[11] = "democrat_sponsor_count"
-                row[12] = "republican_sponsor_count"
+                row.append("democrat_sponsor_count")
+                row.append("republican_sponsor_count")
                 writer.writerow(row)
             else:
                 sponsors = row[9]
+                row.append(0)
+                row.append(0)
                 d_count = 0
                 r_count = 0
                 with open(filenameTwo, 'r', newline='') as csvFileTwo:

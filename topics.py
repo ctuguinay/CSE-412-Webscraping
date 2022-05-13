@@ -6,7 +6,7 @@ totalData = None
 h3 = None
 first_span = None
 
-#"?biennium=2021-22&topicId=14720"
+#"?biennium=2021-22&topic=COVID-19%20AND%20CORONAVIRUS"
 #"?biennium=2021-22&topic=BUDGETS",
 #   "?biennium=2021-22&topic=COMPUTERS",
 #   "?biennium=2021-22&topic=EMERGENCY%20MANAGEMENT%20AND%20SERVICES",
