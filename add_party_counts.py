@@ -4,12 +4,12 @@ import shutil
 import csv
 
 #topics = listdir("topic_CSVS")
-topics = listdir("revised_topic_CSVS")
+topics = listdir("second_revised_CSVs")
 
 filenameTwo = "member_CSVs/combined_members.csv"
 for topic in topics:
     #filename = "topic_CSVS/" + topic
-    filename = "revised_topic_CSVS/" + topic
+    filename = "second_revised_CSVs/" + topic
     tempfile = NamedTemporaryFile('w+t', newline='', delete=False)
 
     with open(filename, 'r', newline='') as csvFile, tempfile:
@@ -19,12 +19,12 @@ for topic in topics:
         #           "senate_progress", "after_passage_progress", "description_2", "sponsors", "requester"]
         # writer.writerow(columns)
         for row in reader:
-            if "main_topic" == row[0]:
+            if "bill_number" == row[0]:
                 row.append("democrat_sponsor_count")
                 row.append("republican_sponsor_count")
                 writer.writerow(row)
             else:
-                sponsors = row[9]
+                sponsors = row[8]
                 row.append(0)
                 row.append(0)
                 d_count = 0
