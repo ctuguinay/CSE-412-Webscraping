@@ -9,8 +9,8 @@ def month_to_number(month):
     return month_number
 
 
-with open("second_revised_CSVs/temporal.csv", mode='w') as file, open("second_revised_CSVs/second_revised.csv",
-                                                                      mode='r') as fileTwo:
+with open("second_revised_CSVs/temporal.csv", mode='w', newline='') as file, open(
+        "second_revised_CSVs/second_revised.csv", mode='r') as fileTwo:
     writer = csv.writer(file, delimiter=',', quotechar='"')
     reader = csv.reader(fileTwo, delimiter=',', quotechar='"')
     for row in reader:
@@ -80,7 +80,8 @@ with open("second_revised_CSVs/temporal.csv", mode='w') as file, open("second_re
                     end_date.append("2021")
                 else:
                     end_date.append("2022")
-                start_datetime = datetime.datetime(int(start_date[2]), month_to_number(start_date[0]), int(start_date[1]))
+                start_datetime = datetime.datetime(int(start_date[2]), month_to_number(start_date[0]),
+                                                   int(start_date[1]))
                 end_datetime = datetime.datetime(int(end_date[2]), month_to_number(end_date[0]), int(end_date[1]))
                 difference = end_datetime - start_datetime
                 difference = str(difference)
@@ -94,6 +95,8 @@ with open("second_revised_CSVs/temporal.csv", mode='w') as file, open("second_re
             row.append(season_years_active)
             writer.writerow(row)
         else:
-            columns = ["main_topic", "description_1", "bill_link", "bill_name", "current_status", "house_progress",
-                       "senate_progress", "after_passage_progress", "description_2", "sponsors", "requester", ""]
+            columns = ["bill_number", "bill_link", "bill_name", "current_status",
+                       "first_house_progress", "second_house_progress", "after_passage_progress", "description",
+                       "sponsors", "requester", "bill_history", "democrat_sponsor_count", "republican_sponsor_count",
+                       "total_days_spent", "season_years_active"]
             writer.writerow(columns)
