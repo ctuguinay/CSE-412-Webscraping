@@ -1,7 +1,7 @@
 import csv
 
 with open("second_revised_CSVs/status_simplify.csv", mode='w', newline='') as file, open(
-        "second_revised_CSVs/second_revised.csv", mode='r') as fileTwo:
+        "second_revised_CSVs/temporal.csv", mode='r') as fileTwo:
     writer = csv.writer(file, delimiter=',', quotechar='"')
     reader = csv.reader(fileTwo, delimiter=',', quotechar='"')
     for row in reader:
