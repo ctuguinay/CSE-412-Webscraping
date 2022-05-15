@@ -19,14 +19,8 @@ for topic in topics:
         #           "senate_progress", "after_passage_progress", "description_2", "sponsors", "requester"]
         # writer.writerow(columns)
         for row in reader:
-            if "bill_number" == row[0]:
-                row.append("democrat_sponsor_count")
-                row.append("republican_sponsor_count")
-                writer.writerow(row)
-            else:
+            if not "bill_number" == row[0]:
                 sponsors = row[8]
-                row.append(0)
-                row.append(0)
                 d_count = 0
                 r_count = 0
                 with open(filenameTwo, 'r', newline='') as csvFileTwo:

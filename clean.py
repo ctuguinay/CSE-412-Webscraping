@@ -18,18 +18,18 @@ for topic in topics:
         for row in reader:
             if len(row) > 0:
                 if not row[0] == "bill_number":
-                    sponsors = row[9]
+                    sponsors = row[8]
                     sponsors = sponsors.replace("Johnson, J.", "Jesse Johnson")
                     sponsors = sponsors.replace("Wilson, C.", "Claire Wilson")
                     sponsors = sponsors.replace("Wilson, J.", "Jeff Wilson")
                     sponsors = sponsors.replace("Wilson, L.", "Linda Wilson")
-                    row[9] = sponsors
+                    row[8] = sponsors
                     writer.writerow(row)
-                else:
-                    columns = ["bill_number", "bill_link", "bill_name", "current_status",
-                               "first_house_progress", "second_house_progress", "after_passage_progress", "description",
-                               "sponsors", "requester", "bill_history"]
-                    writer.writerow(columns)
+                #else:
+                #    columns = ["bill_number", "bill_link", "bill_name", "current_status",
+                #               "first_house_progress", "second_house_progress", "after_passage_progress", "description",
+                #               "sponsors", "requester", "bill_history"]
+                #    writer.writerow(columns)
 
     shutil.move(tempfile.name, filename)
 
