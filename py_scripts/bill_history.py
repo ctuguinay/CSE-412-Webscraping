@@ -11,13 +11,11 @@ def month_to_number(month):
 
 
 with HTMLSession() as session:
-    with open("bill_history_CSVs/bill_history.csv", mode='w', newline='') as file:
+    with open("bill_history_CSVs/bill_history_revised.csv", mode='w', newline='') as file:
 
         csv_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
 
         url = "https://app.leg.wa.gov/billsummary?BillNumber=1162&Year=2021&Initiative=false"
-
-        bill = [1162, url]
 
         response = session.get(url)
         response.html.render()
@@ -29,22 +27,19 @@ with HTMLSession() as session:
             if "Bill Not Found." in row.text:
                 count = count + 1
         if not count > 0:
-            bill_name = soup.find_all("div", class_="billStatusAtAGlanceSubText")[0].text
-            current_status = soup.find_all("div", class_="billStatusAtAGlanceSubText")[1].text
-            current_status = current_status.strip()
-            bill.append(bill_name)
-            bill.append(current_status)
             div = soup.find("div", class_="container-fluid").find("div", class_="row clearfix").findChildren("div",
-                                                                                                             class_=None)[
-                5]
+                                                                                               class_=None)[5]
             divs = div.find_all("div", class_="row clearfix")
             bill_history = soup.find("div", class_="col-xs-12 col-csm-11 col-sm-10 col-md-9 col-lg-10")
             p_list = bill_history.find_all("p")
             history_table_list = bill_history.find_all("div", class_="historytable")
             string = ""
-            csv_writer.writerow(bill)
+            header = ["Session", "Date", "Action", "Days Since First", "Days Till Today", "Days At Action",
+                      "Simplified Action"]
+            csv_writer.writerow(header)
             cur_year = "2021"
             first_date = None
+            bill = []
             for index in range(len(p_list)):
                 total = []
                 p = p_list[index]
@@ -94,14 +89,19 @@ with HTMLSession() as session:
                     total_days_spent = difference.days
                     total_days_array.append(total_days_spent)
                 for i in range(len(revised_total)):
-                    if index == len(p_list) - 1 and i == len(revised_total) - 1:
-                        date_split = revised_total[i][0].split()
-                        date = datetime.datetime(int(date_split[2]), month_to_number(date_split[0]),
-                                                 int(date_split[1]))
-                        now_date = datetime.datetime.now()
-                        difference = now_date - date
-                        days_between_now = difference.days
-                        csv_writer.writerow([step] + revised_total[i] + [total_days_array[i]] + [""] + [days_between_now])
-                    else:
-                        csv_writer.writerow([step] + revised_total[i] + [total_days_array[i]])
+                    date_split = revised_total[i][0].split()
+                    date = datetime.datetime(int(date_split[2]), month_to_number(date_split[0]),
+                                             int(date_split[1]))
+                    now_date = datetime.datetime.now()
+                    difference = now_date - date
+                    days_between_now = difference.days
+                    bill.append([step] + revised_total[i] + [total_days_array[i]] + [days_between_now])
+            for i in range(len(bill)):
+                sub_bill = bill[i]
+                if i == len(bill) - 1:
+                    sub_bill.append(sub_bill[4])
+                else:
+                    next_sub_bill = bill[i+1]
+                    sub_bill.append(next_sub_bill[3] - sub_bill[3])
+                csv_writer.writerow(sub_bill)
             response.close()
