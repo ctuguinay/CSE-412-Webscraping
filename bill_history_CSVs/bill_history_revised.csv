@@ -1,20 +1,20 @@
-Session,Date,Action,Days Since First,Days Till Today,Days At Action,Simplified Action
-2021 REGULAR SESSION,Jan 12 2021,"First reading, referred to Education.",0,498,10,Referred to Non-Rules Committee
-2021 REGULAR SESSION,Jan 22 2021,Public hearing in the House Committee on Education at 10:00 AM.,10,488,13,Public Hearing in Non-Rules Committee
-2021 REGULAR SESSION,Feb 4 2021,"Executive action taken in the House Committee on Education at 1:30 PM. ED - Majority; 1st substitute bill be substituted, do pass. Minority; do not pass. Minority; without recommendation.",23,475,5,Executive Action by Non-Rules Committee
-2021 REGULAR SESSION,Feb 9 2021,Referred to Rules 2 Review.,28,470,14,Referred to Rules Committee
-2021 REGULAR SESSION,Feb 23 2021,Rules Committee relieved of further consideration. Placed on second reading.,42,456,2,Second Reading
-2021 REGULAR SESSION,Feb 25 2021,"1st substitute bill substituted Rules suspended. Placed on Third Reading. Third reading, passed; yeas, 72; nays, 26; absent, 0; excused, 0.",44,454,4,Third Reading
-IN THE SENATE,Mar 1 2021,"First reading, referred to Early Learning & K-12 Education.",48,450,16,"First Reading,Referred to Non-Rules Committee"
-IN THE SENATE,Mar 17 2021,Public hearing in the Senate Committee on Early Learning & K-12 Education at 10:30 AM.,64,434,2,Public Hearing in Non-Rules Committee
-IN THE SENATE,Mar 19 2021,"Executive session scheduled, but no action was taken in the Senate Committee on Early Learning & K-12 Education at 8:00 AM.",66,432,37,Executive Action by Non-Rules Committee
-IN THE SENATE,Apr 25 2021,"By resolution, returned to House Rules Committee for third reading.",103,395,260,Third Reading
-2022 REGULAR SESSION,Jan 10 2022,Rules Committee relieved of further consideration. Referred to Education.,363,135,1,Referred to Non-Rules Committee
-2022 REGULAR SESSION,Jan 11 2022,Public hearing in the House Committee on Education at 8:00 AM.,364,134,10,Public Hearing in Non-Rules Committee
-2022 REGULAR SESSION,Jan 21 2022,"Executive action taken in the House Committee on Education at 10:00 AM. ED - Majority; 2nd substitute bill be substituted, do pass. Minority; do not pass. Minority; without recommendation.",374,124,5,Executive Action by Non-Rules Committee
-2022 REGULAR SESSION,Jan 26 2022,Referred to Rules 2 Review.,379,119,19,Referred to Rules Committee
-2022 REGULAR SESSION,Feb 14 2022,"Rules Committee relieved of further consideration. Placed on second reading. 2nd substitute bill substituted Floor amendment Rules suspended. Placed on Third Reading. Third reading, passed; yeas, 77; nays, 21; absent, 0; excused, 0.",398,100,2,Third Reading
-IN THE SENATE,Feb 16 2022,"First reading, referred to Early Learning & K-12 Education.",400,98,5,Referred to Non-Rules Committee
-IN THE SENATE,Feb 21 2022,Public hearing in the Senate Committee on Early Learning & K-12 Education at 1:30 PM.,405,93,2,Public Hearing in Non-Rules Committee
-IN THE SENATE,Feb 23 2022,"Executive session scheduled, but no action was taken in the Senate Committee on Early Learning & K-12 Education at 10:30 AM.",407,91,15,Executive Action by Non-Rules Committee
-IN THE SENATE,Mar 10 2022,"By resolution, returned to House Rules Committee for third reading.",422,76,76,Third Reading
+Session,Date,Action,Days Since First,Days Till Today,Days At Action,Simplified Action,Progress Percentage
+2021 REGULAR SESSION,Jan 12 2021,"First reading, referred to Education.",0,498,10,Referred to Non-Rules Committee,5%
+2021 REGULAR SESSION,Jan 22 2021,Public hearing in the House Committee on Education at 10:00 AM.,10,488,13,Public Hearing in Non-Rules Committee,10%
+2021 REGULAR SESSION,Feb 4 2021,"Executive action taken in the House Committee on Education at 1:30 PM. ED - Majority; 1st substitute bill be substituted, do pass. Minority; do not pass. Minority; without recommendation.",23,475,5,Executive Action by Non-Rules Committee,15%
+2021 REGULAR SESSION,Feb 9 2021,Referred to Rules 2 Review.,28,470,14,Referred to Rules Committee,20%
+2021 REGULAR SESSION,Feb 23 2021,Rules Committee relieved of further consideration. Placed on second reading.,42,456,2,Second Reading,30%
+2021 REGULAR SESSION,Feb 25 2021,"1st substitute bill substituted Rules suspended. Placed on Third Reading. Third reading, passed; yeas, 72; nays, 26; absent, 0; excused, 0.",44,454,4,Third Reading,35%
+IN THE SENATE,Mar 1 2021,"First reading, referred to Early Learning & K-12 Education.",48,450,16,Referred to Non-Rules Committee,45%
+IN THE SENATE,Mar 17 2021,Public hearing in the Senate Committee on Early Learning & K-12 Education at 10:30 AM.,64,434,2,Public Hearing in Non-Rules Committee,50%
+IN THE SENATE,Mar 19 2021,"Executive session scheduled, but no action was taken in the Senate Committee on Early Learning & K-12 Education at 8:00 AM.",66,432,37,Executive Action by Non-Rules Committee,55%
+IN THE SENATE,Apr 25 2021,"By resolution, returned to House Rules Committee for third reading.",103,395,260,Third Reading,75%
+2022 REGULAR SESSION,Jan 10 2022,Rules Committee relieved of further consideration. Referred to Education.,363,135,1,Referred to Non-Rules Committee,5%
+2022 REGULAR SESSION,Jan 11 2022,Public hearing in the House Committee on Education at 8:00 AM.,364,134,10,Public Hearing in Non-Rules Committee,10%
+2022 REGULAR SESSION,Jan 21 2022,"Executive action taken in the House Committee on Education at 10:00 AM. ED - Majority; 2nd substitute bill be substituted, do pass. Minority; do not pass. Minority; without recommendation.",374,124,5,Executive Action by Non-Rules Committee,15%
+2022 REGULAR SESSION,Jan 26 2022,Referred to Rules 2 Review.,379,119,19,Referred to Rules Committee,20%
+2022 REGULAR SESSION,Feb 14 2022,"Rules Committee relieved of further consideration. Placed on second reading. 2nd substitute bill substituted Floor amendment Rules suspended. Placed on Third Reading. Third reading, passed; yeas, 77; nays, 21; absent, 0; excused, 0.",398,100,2,Third Reading,35%
+IN THE SENATE,Feb 16 2022,"First reading, referred to Early Learning & K-12 Education.",400,98,5,Referred to Non-Rules Committee,45%
+IN THE SENATE,Feb 21 2022,Public hearing in the Senate Committee on Early Learning & K-12 Education at 1:30 PM.,405,93,2,Public Hearing in Non-Rules Committee,50%
+IN THE SENATE,Feb 23 2022,"Executive session scheduled, but no action was taken in the Senate Committee on Early Learning & K-12 Education at 10:30 AM.",407,91,15,Executive Action by Non-Rules Committee,55%
+IN THE SENATE,Mar 10 2022,"By resolution, returned to House Rules Committee for third reading.",422,76,76,Third Reading,35%
