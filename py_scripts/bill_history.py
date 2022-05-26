@@ -1,9 +1,16 @@
 from bs4 import BeautifulSoup
 from requests_html import HTMLSession
 import csv
+import datetime
+
+
+def month_to_number(month):
+    datetime_object = datetime.datetime.strptime(month, "%b")
+    month_number = int(datetime_object.month)
+    return month_number
+
 
 with HTMLSession() as session:
-
     with open("bill_history_CSVs/bill_history.csv", mode='w', newline='') as file:
 
         csv_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
@@ -27,7 +34,9 @@ with HTMLSession() as session:
             current_status = current_status.strip()
             bill.append(bill_name)
             bill.append(current_status)
-            div = soup.find("div", class_="container-fluid").find("div", class_="row clearfix").findChildren("div",class_=None)[5]
+            div = soup.find("div", class_="container-fluid").find("div", class_="row clearfix").findChildren("div",
+                                                                                                             class_=None)[
+                5]
             divs = div.find_all("div", class_="row clearfix")
             bill_history = soup.find("div", class_="col-xs-12 col-csm-11 col-sm-10 col-md-9 col-lg-10")
             p_list = bill_history.find_all("p")
@@ -35,6 +44,7 @@ with HTMLSession() as session:
             string = ""
             csv_writer.writerow(bill)
             cur_year = "2021"
+            first_date = None
             for index in range(len(p_list)):
                 total = []
                 p = p_list[index]
@@ -55,7 +65,8 @@ with HTMLSession() as session:
                     cur_date = total[i][0]
                     cur_text = total[i][1]
                     if len(cur_date) == 0:
-                        revised_total[len(revised_total) - 1][1] = revised_total[len(revised_total) - 1][1] + " " + cur_text
+                        revised_total[len(revised_total) - 1][1] = revised_total[len(revised_total) - 1][
+                                                                       1] + " " + cur_text
                     else:
                         revised_total.append(total[i])
                 for i in range(len(revised_total)):
@@ -70,6 +81,27 @@ with HTMLSession() as session:
                     else:
                         date = date + " " + cur_year
                     revised_total[i][0] = date
+                f_date_split = revised_total[0][0].split()
+                if not first_date:
+                    first_date = datetime.datetime(int(f_date_split[2]), month_to_number(f_date_split[0]),
+                                                   int(f_date_split[1]))
+                total_days_array = []
                 for i in range(len(revised_total)):
-                    csv_writer.writerow([step] + revised_total[i])
+                    date_split = revised_total[i][0].split()
+                    date = datetime.datetime(int(date_split[2]), month_to_number(date_split[0]),
+                                             int(date_split[1]))
+                    difference = date - first_date
+                    total_days_spent = difference.days
+                    total_days_array.append(total_days_spent)
+                for i in range(len(revised_total)):
+                    if index == len(p_list) - 1 and i == len(revised_total) - 1:
+                        date_split = revised_total[i][0].split()
+                        date = datetime.datetime(int(date_split[2]), month_to_number(date_split[0]),
+                                                 int(date_split[1]))
+                        now_date = datetime.datetime.now()
+                        difference = now_date - date
+                        days_between_now = difference.days
+                        csv_writer.writerow([step] + revised_total[i] + [total_days_array[i]] + [] + [days_between_now])
+                    else:
+                        csv_writer.writerow([step] + revised_total[i] + [total_days_array[i]])
             response.close()
