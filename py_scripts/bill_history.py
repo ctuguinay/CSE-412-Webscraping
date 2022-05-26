@@ -101,7 +101,7 @@ with HTMLSession() as session:
                         now_date = datetime.datetime.now()
                         difference = now_date - date
                         days_between_now = difference.days
-                        csv_writer.writerow([step] + revised_total[i] + [total_days_array[i]] + [] + [days_between_now])
+                        csv_writer.writerow([step] + revised_total[i] + [total_days_array[i]] + [""] + [days_between_now])
                     else:
                         csv_writer.writerow([step] + revised_total[i] + [total_days_array[i]])
             response.close()
