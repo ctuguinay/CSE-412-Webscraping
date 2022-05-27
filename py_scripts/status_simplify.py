@@ -8,7 +8,7 @@ with open("second_revised_CSVs/status_simplify.csv", mode='w', newline='') as fi
         if not row[0] == "bill_number":
             simplified_status = ""
             current_chamber = ""
-            bill = "no"
+            bill = "Not Passed"
             status = row[3]
             if status[0] == "H":
                 current_chamber = "Representatives"
@@ -18,7 +18,7 @@ with open("second_revised_CSVs/status_simplify.csv", mode='w', newline='') as fi
                 current_chamber = "Neither"
             if "C" == status[0]:
                 simplified_status = "Law"
-                bill = "yes"
+                bill = "Passed"
             elif "Gov vetoed" in status:
                 simplified_status = "Governor Veto"
             elif "Rules X" in status:
