@@ -36,11 +36,21 @@ with open("second_revised_CSVs/chambers_visited.csv", mode='w', newline='') as f
             row.append(chambers_visited)
             row.append(chambers_visited_abbreviated)
             row.append(number_chambers_visited)
+            first_chamber = row[4]
+            second_chamber = row[5]
+            third_chamber = row[6]
+            total_count = 0
+            numbers = [2, 7, 12, 17]
+            for number in numbers:
+                total_count = total_count + int(first_chamber[number]) + int(second_chamber[number]) \
+                              + int(third_chamber[number])
+            row.append(total_count)
             writer.writerow(row)
         else:
             columns = ["bill_number", "bill_link", "bill_name", "current_status",
                        "first_house_progress", "second_house_progress", "after_passage_progress", "description",
                        "sponsors", "requester", "bill_history", "democrat_sponsor_count", "republican_sponsor_count",
                        "total_days_spent", "season_years_active", "simplified_status", "current_chamber", "bill",
-                       "chambers_visited", "chambers_visited_abbreviated", "number_chambers_visited"]
+                       "chambers_visited", "chambers_visited_abbreviated", "number_chambers_visited",
+                       "number_filled_in_dots"]
             writer.writerow(columns)
