@@ -11,11 +11,11 @@ def month_to_number(month):
 
 
 with HTMLSession() as session:
-    with open("bill_history_CSVs/bill_history_revised.csv", mode='w', newline='') as file:
+    with open("bill_history_CSVs/bill_history_ex_two.csv", mode='w', newline='') as file:
 
         csv_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
 
-        url = "https://app.leg.wa.gov/billsummary?BillNumber=1162&Year=2021&Initiative=false"
+        url = "https://app.leg.wa.gov/billsummary?BillNumber=1001&Year=2021&Initiative=false"
 
         response = session.get(url)
         response.html.render()
@@ -35,7 +35,7 @@ with HTMLSession() as session:
             history_table_list = bill_history.find_all("div", class_="historytable")
             string = ""
             header = ["Session", "Date", "Action", "Days Since First", "Days Till Today", "Days At Action",
-                      "Simplified Action"]
+                      "Location"]
             csv_writer.writerow(header)
             cur_year = "2021"
             first_date = None
