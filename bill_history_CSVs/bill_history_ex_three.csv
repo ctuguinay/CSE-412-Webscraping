@@ -1,0 +1,25 @@
+Session,Date,Action,Days Since First,Days Till Today,Days At Action,Location
+2021 REGULAR SESSION,Jan 8 2021,Prefiled for introduction.,0,504,3,House: Non-Rules
+2021 REGULAR SESSION,Jan 11 2021,"First reading, referred to Health Care & Wellness.",3,501,17,House: Non-Rules
+2021 REGULAR SESSION,Jan 28 2021,Public hearing in the House Committee on Health Care & Wellness at 10:00 AM.,20,484,13,House: Non-Rules
+2021 REGULAR SESSION,Feb 10 2021,"Executive action taken in the House Committee on Health Care & Wellness at 8:00 AM. HCW - Majority; 1st substitute bill be substituted, do pass. Minority; without recommendation.",33,471,2,House: Non-Rules
+2021 REGULAR SESSION,Feb 12 2021,Referred to Appropriations.,35,469,7,House: Non-Rules
+2021 REGULAR SESSION,Feb 19 2021,Public hearing in the House Committee on Appropriations at 1:30 PM.,42,462,3,House: Non-Rules
+2021 REGULAR SESSION,Feb 22 2021,"Executive action taken in the House Committee on Appropriations at 9:00 AM. APP - Majority; 2nd substitute bill be substituted, do pass. Minority; without recommendation. Referred to Rules 2 Review.",45,459,3,House: Rules
+2021 REGULAR SESSION,Feb 25 2021,Rules Committee relieved of further consideration. Placed on second reading.,48,456,4,House: Rules
+2021 REGULAR SESSION,Mar 1 2021,"2nd substitute bill substituted Rules suspended. Placed on Third Reading. Third reading, passed; yeas, 76; nays, 21; absent, 0; excused, 1.",52,452,3,House: Rules
+IN THE SENATE,Mar 4 2021,"First reading, referred to Health & Long Term Care.",55,449,6,Senate: Non-Rules
+IN THE SENATE,Mar 10 2021,"Executive action taken in the Senate Committee on Health & Long Term Care at 8:00 AM. HLTC - Majority; without recommendation. And refer to Environment, Energy & Technology.",61,443,1,Senate: Non-Rules
+IN THE SENATE,Mar 11 2021,"Referred to Environment, Energy & Technology.",62,442,6,Senate: Non-Rules
+IN THE SENATE,Mar 17 2021,"Public hearing in the Senate Committee on Environment, Energy & Technology at 8:00 AM.",68,436,8,Senate: Non-Rules
+IN THE SENATE,Mar 25 2021,"Executive action taken in the Senate Committee on Environment, Energy & Technology at 10:30 AM. ENET - Majority; do pass with amendment Minority; do not pass. Minority; without recommendation. And refer to Ways & Means.",76,428,1,Senate: Non-Rules
+IN THE SENATE,Mar 26 2021,Referred to Ways & Means.,77,427,5,Senate: Non-Rules
+IN THE SENATE,Mar 31 2021,Public hearing in the Senate Committee on Ways & Means at 1:30 PM.,82,422,2,Senate: Non-Rules
+IN THE SENATE,Apr 2 2021,Executive action taken in the Senate Committee on Ways & Means at 9:00 AM. WM - Majority; do pass with amendment Minority; do not pass. Minority; without recommendation. Passed to Rules Committee for second reading.,84,420,4,Senate: Rules
+IN THE SENATE,Apr 6 2021,Placed on second reading by Rules Committee.,88,416,4,Senate: Rules
+IN THE SENATE,Apr 10 2021,"Committee amendment Rules suspended. Placed on Third Reading. Third reading, passed; yeas, 28; nays, 20; absent, 0; excused, 1.",92,412,4,Senate: Rules
+IN THE HOUSE,Apr 14 2021,"House concurred in Senate amendments. Passed final passage; yeas, 83; nays, 13; absent, 0; excused, 2.",96,408,6,Pre-Governor
+IN THE HOUSE,Apr 20 2021,Speaker signed.,102,402,1,Pre-Governor
+IN THE SENATE,Apr 21 2021,President signed.,103,401,1,Pre-Governor
+OTHER THAN LEGISLATIVE ACTION,Apr 22 2021,Delivered to Governor.,104,400,26,Governor
+OTHER THAN LEGISLATIVE ACTION,May 18 2021,Governor vetoed.,130,374,374,Not in Session

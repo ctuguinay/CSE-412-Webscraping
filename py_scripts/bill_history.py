@@ -15,7 +15,7 @@ with HTMLSession() as session:
 
         csv_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
 
-        url = "https://app.leg.wa.gov/billsummary?BillNumber=1001&Year=2021&Initiative=false"
+        url = "https://app.leg.wa.gov/billsummary?BillNumber=1127&Initiative=false&Year=2021"
 
         response = session.get(url)
         response.html.render()
