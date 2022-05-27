@@ -1,0 +1,20 @@
+Session,Date,Action,Days Since First,Days Till Today,Days At Action,Location
+2021 REGULAR SESSION,Dec 7 2020,Prefiled for introduction.,0,536,35,House: Non-Rules
+2021 REGULAR SESSION,Jan 11 2021,"First reading, referred to Appropriations.",35,501,8,House: Non-Rules
+2021 REGULAR SESSION,Jan 19 2021,Public hearing in the House Committee on Appropriations at 3:30 PM.,43,493,16,House: Non-Rules
+2021 REGULAR SESSION,Feb 4 2021,Executive action taken in the House Committee on Appropriations at 3:30 PM. APP - Majority; do pass.,59,477,5,House: Non-Rules
+2021 REGULAR SESSION,Feb 9 2021,Referred to Rules 2 Review. Placed on second reading by Rules Committee.,64,472,1,House: Rules
+2021 REGULAR SESSION,Feb 10 2021,"Rules suspended. Placed on Third Reading. Third reading, passed; yeas, 98; nays, 0; absent, 0; excused, 0.",65,471,2,House: Rules
+IN THE SENATE,Feb 12 2021,"First reading, referred to Law & Justice.",67,469,13,Senate: Non-Rules
+IN THE SENATE,Feb 25 2021,Public hearing in the Senate Committee on Law & Justice at 8:30 AM.,80,456,7,Senate: Non-Rules
+IN THE SENATE,Mar 4 2021,Executive action taken in the Senate Committee on Law & Justice at 8:30 AM. LAW - Majority; do pass. And refer to Ways & Means.,87,449,1,Senate: Non-Rules
+IN THE SENATE,Mar 5 2021,Referred to Ways & Means.,88,448,11,Senate: Non-Rules
+IN THE SENATE,Mar 16 2021,Public hearing in the Senate Committee on Ways & Means at 4:00 PM.,99,437,6,Senate: Non-Rules
+IN THE SENATE,Mar 22 2021,Executive action taken in the Senate Committee on Ways & Means at 4:00 PM. WM - Majority; do pass.,105,431,1,Senate: Non-Rules
+IN THE SENATE,Mar 23 2021,Passed to Rules Committee for second reading.,106,430,3,Senate: Rules
+IN THE SENATE,Mar 26 2021,Placed on second reading by Rules Committee.,109,427,11,Senate: Rules
+IN THE SENATE,Apr 6 2021,"Rules suspended. Placed on Third Reading. Third reading, passed; yeas, 49; nays, 0; absent, 0; excused, 0.",120,416,1,Senate: Rules
+IN THE HOUSE,Apr 7 2021,Speaker signed.,121,415,2,Pre-Governor
+IN THE SENATE,Apr 9 2021,President signed.,123,413,4,Pre-Governor
+OTHER THAN LEGISLATIVE ACTION,Apr 13 2021,Delivered to Governor.,127,409,3,Governor
+OTHER THAN LEGISLATIVE ACTION,Apr 16 2021,"Governor signed. Chapter 52, 2021 Laws. Effective date 7/25/2021.",130,406,406,Law
