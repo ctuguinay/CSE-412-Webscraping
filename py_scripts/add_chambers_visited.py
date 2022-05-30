@@ -17,19 +17,19 @@ with open("second_revised_CSVs/chambers_visited.csv", mode='w', newline='') as f
                 number_chambers_visited = number_chambers_visited + 1
                 if "SESSION" in split:
                     if bill_number < 5000:
-                        chambers_visited = chambers_visited + "HOUSE "
+                        chambers_visited = chambers_visited + "House "
                         chambers_visited_abbreviated = chambers_visited_abbreviated + "H "
                     else:
-                        chambers_visited = chambers_visited + "SENATE "
+                        chambers_visited = chambers_visited + "Senate "
                         chambers_visited_abbreviated = chambers_visited_abbreviated + "S "
                 elif "HOUSE" in split:
-                    chambers_visited = chambers_visited + "HOUSE "
+                    chambers_visited = chambers_visited + "House "
                     chambers_visited_abbreviated = chambers_visited_abbreviated + "H "
                 elif "SENATE" in split:
-                    chambers_visited = chambers_visited + "SENATE "
+                    chambers_visited = chambers_visited + "Senate "
                     chambers_visited_abbreviated = chambers_visited_abbreviated + "S "
                 elif "OTHER THAN" in split:
-                    chambers_visited = chambers_visited + "GOVERNOR "
+                    chambers_visited = chambers_visited + "Governor "
                     chambers_visited_abbreviated = chambers_visited_abbreviated + "G "
             chambers_visited = chambers_visited.strip()
             chambers_visited_abbreviated = chambers_visited_abbreviated.strip()
